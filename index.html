@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <title>SHVS – State Higher Vocational School</title>
+  <title>State Higher Vocational School in Tarnów – SHVS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="SHVS – State Higher Vocational School. Practical, career-focused higher education with international cooperation." />
+  <meta name="description" content="State Higher Vocational School in Tarnów (SHVS) – nowoczesna szkoła ogólnokształcąca i zawodowa w Tarnowie. Edukacja ogólna, profile językowe, informatyczne, przyrodnicze i biznesowe." />
   <style>
-    /* ==== SIMPLE ONE-FILE DESIGN WITH PROGRAMMES + GALLERY + TEACHERS ==== */
+    /* ==== ONE-FILE SCHOOL WEBSITE FOR SHVS (K-12 STYLE) ==== */
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
@@ -90,7 +90,7 @@
     }
 
     .hero h1 {
-      font-size: clamp(2.2rem, 3vw + 1.2rem, 3.1rem);
+      font-size: clamp(2.1rem, 3vw + 1.1rem, 3rem);
       line-height: 1.1;
       margin-bottom: 0.6rem;
     }
@@ -100,6 +100,13 @@
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #93c5fd;
+      margin-bottom: 0.3rem;
     }
 
     .hero p {
@@ -150,7 +157,7 @@
     .stat span:first-child {
       display: block;
       font-weight: 600;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
     }
 
     .hero-card {
@@ -200,7 +207,7 @@
 
     .section p.lead {
       color: #9ca3af;
-      max-width: 34rem;
+      max-width: 38rem;
       font-size: 0.95rem;
       margin-bottom: 1.4rem;
     }
@@ -402,7 +409,7 @@
     }
 
     @media (max-width: 640px) {
-      nav { display: none; } /* mobile e just logo thakbe */
+      nav { display: none; } /* mobile: simple top bar */
       .hero { padding-top: 2.2rem; }
     }
   </style>
@@ -414,16 +421,16 @@
     <div class="container nav">
       <div>
         <div class="logo-badge">SHVS</div>
-        <div class="logo-text">State Higher Vocational School</div>
+        <div class="logo-text">State Higher Vocational School in Tarnów</div>
       </div>
       <nav>
-        <a href="#hero">Home</a>
-        <a href="#about">About</a>
-        <a href="#programmes">Programmes</a>
-        <a href="#life">Student Life</a>
-        <a href="#teachers">Teachers</a>
-        <a href="#admissions">Admissions</a>
-        <a href="#contact" class="btn-nav">Contact</a>
+        <a href="#hero">Strona główna</a>
+        <a href="#about">O szkole</a>
+        <a href="#programmes">Kierunki</a>
+        <a href="#life">Życie szkolne</a>
+        <a href="#teachers">Kadra</a>
+        <a href="#admissions">Rekrutacja</a>
+        <a href="#contact" class="btn-nav">Kontakt</a>
       </nav>
     </div>
   </header>
@@ -432,43 +439,46 @@
   <section id="hero" class="hero">
     <div class="container hero-grid">
       <div>
-        <h1>Practical Higher Education<br><span class="accent">for a Global Future</span></h1>
+        <div class="hero-subtitle">Szkoła ogólnokształcąca i zawodowa w Tarnowie</div>
+        <h1>Bezpieczna i przyjazna szkoła<br><span class="accent">dla uczniów i rodziców</span></h1>
         <p>
-          SHVS (State Higher Vocational School) offers modern, career-focused programmes
-          that combine academic knowledge with real-world skills, international projects,
-          and cooperation with industry partners.
+          State Higher Vocational School in Tarnów (SHVS) to nowoczesna publiczna szkoła,
+          łącząca edukację ogólnokształcącą z profilami zawodowymi. Dbamy o solidne
+          podstawy z przedmiotów szkolnych, języków obcych i praktycznych umiejętności,
+          które pomagają uczniom kontynuować naukę lub rozpocząć pracę zawodową.
         </p>
 
         <div class="hero-buttons">
-          <a href="#admissions" class="btn btn-primary">Apply Now</a>
-          <a href="#programmes" class="btn btn-ghost">View Programmes</a>
+          <a href="#admissions" class="btn btn-primary">Zapisz się do szkoły</a>
+          <a href="#programmes" class="btn btn-ghost">Poznaj kierunki</a>
         </div>
 
         <div class="hero-stats">
           <div class="stat">
-            <span>20+</span><span>Study programmes</span>
+            <span>Klasy 1–12</span><span>nauczanie ogólne i profilowane</span>
           </div>
           <div class="stat">
-            <span>3,000+</span><span>Active students</span>
+            <span>800+</span><span>uczniów z Tarnowa i okolic</span>
           </div>
           <div class="stat">
-            <span>40+</span><span>Partner institutions</span>
+            <span>60+</span><span>nauczycieli i pracowników</span>
           </div>
         </div>
       </div>
 
       <div>
         <div class="hero-card">
-          <div class="hero-tag">International Friendly</div>
-          <h3>Study in a modern European campus</h3>
+          <div class="hero-tag">Przyjazne środowisko szkolne</div>
+          <h3>Nauka, bezpieczeństwo i wsparcie na co dzień</h3>
           <p>
-            Join students from different countries, develop your skills,
-            and experience life in a safe and welcoming city.
+            W SHVS stawiamy na niewielkie zespoły klasowe, indywidualne podejście,
+            współpracę z rodzicami oraz szeroką ofertę zajęć dodatkowych
+            po lekcjach.
           </p>
           <ul>
-            <li>Practice-based classes & labs</li>
-            <li>Small groups & individual support</li>
-            <li>Erasmus+ mobility opportunities</li>
+            <li>Wychowawca w każdej klasie</li>
+            <li>Psycholog i pedagog szkolny</li>
+            <li>Nowoczesne sale, pracownie komputerowe i biblioteka</li>
           </ul>
           <div class="hero-photo"></div>
         </div>
@@ -480,196 +490,135 @@
   <section id="about" class="section section-alt">
     <div class="container two-col">
       <div>
-        <h2>About SHVS</h2>
+        <h2>O szkole – State Higher Vocational School in Tarnów</h2>
         <p class="lead">
-          SHVS is a public state higher vocational school offering first-cycle
-          (bachelor and engineer) programmes with a strong practical profile.
+          State Higher Vocational School in Tarnów znajduje się w centrum miasta,
+          pod adresem <strong>ul. Adama Mickiewicza 8, 33-100 Tarnów, Polska</strong>.
+          Szkoła łączy kształcenie ogólne na poziomie podstawowym i ponadpodstawowym
+          z nauczaniem w profilach zawodowych.
         </p>
         <p>
-          Our classes are conducted by experienced academics and professionals.
-          Students benefit from modern laboratories, multimedia classrooms,
-          and close cooperation with local companies and institutions.
+          Naszą misją jest stworzenie bezpiecznego, przyjaznego i inspirującego miejsca,
+          w którym każdy uczeń może rozwijać się intelektualnie, społecznie i emocjonalnie.
+          Utrzymujemy stały kontakt z rodzicami – informujemy o postępach, projektach
+          i wydarzeniach szkolnych.
+        </p>
+        <p>
+          Zajęcia odbywają się w nowoczesnych salach z dostępem do multimediów,
+          pracowni informatycznych, laboratoriów przyrodniczych oraz sali gimnastycznej.
+          W starszych klasach uczniowie wybierają profile (np. informatyczny,
+          językowy, przyrodniczy, biznesowy), które pozwalają zdobyć praktyczne
+          umiejętności i przygotować się do dalszej edukacji.
         </p>
       </div>
       <div class="card">
-        <h3>Key Facts</h3>
+        <h3>Najważniejsze informacje</h3>
         <ul>
-          <li>Public higher education institution</li>
-          <li>Modern campus & specialist laboratories</li>
-          <li>Strong focus on employability</li>
-          <li>International projects and partnerships</li>
+          <li>Publiczna szkoła w Tarnowie</li>
+          <li>Edukacja ogólna od młodszych klas po etap ponadpodstawowy</li>
+          <li>Profile: informatyczny, językowy, przyrodniczy, biznesowy</li>
+          <li>Nowoczesny kampus: pracownie, hala sportowa, biblioteka</li>
+          <li>Wsparcie ucznia: wychowawcy, pedagog, zajęcia wyrównawcze</li>
+          <li>Ścisła współpraca z rodzicami i środowiskiem lokalnym</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- PROGRAMMES + COURSES -->
+  <!-- PROGRAMMES -->
   <section id="programmes" class="section">
     <div class="container">
-      <h2>Study Programmes</h2>
-      <p class="lead">Full list of fields with example courses for each programme.</p>
+      <h2>Kierunki i profil nauczania</h2>
+      <p class="lead">
+        SHVS oferuje edukację ogólną dla młodszych uczniów oraz klasy profilowane
+        dla starszych. Uczniowie mogą rozwijać zainteresowania w obszarze języków,
+        informatyki, nauk ścisłych, zdrowia i biznesu.
+      </p>
 
       <div class="grid-4">
-        <!-- Engineering & IT -->
+        <!-- General -->
         <div class="card">
-          <h3>Engineering &amp; IT</h3>
+          <h3>Nauczanie ogólne</h3>
           <details open>
-            <summary>BSc in Computer Science</summary>
+            <summary>Klasy młodsze i średnie</summary>
             <ul>
-              <li>Programming in C++ &amp; Python</li>
-              <li>Web Development &amp; Databases</li>
-              <li>Algorithms &amp; Data Structures</li>
-              <li>Software Engineering Project</li>
+              <li>Język polski i literatura</li>
+              <li>Matematyka, przyroda, biologia</li>
+              <li>Języki obce (angielski, niemiecki)</li>
+              <li>Historia, WOS, geografia</li>
+              <li>Plastyka, muzyka, wychowanie fizyczne</li>
             </ul>
           </details>
           <details>
-            <summary>Engineer in Electrical Engineering</summary>
+            <summary>Klasy starsze (profil ogólny)</summary>
             <ul>
-              <li>Circuit Theory &amp; Electronics</li>
-              <li>Power Systems &amp; Machines</li>
-              <li>Automation &amp; PLC</li>
-              <li>Energy Efficiency &amp; Renewables</li>
-            </ul>
-          </details>
-          <details>
-            <summary>Engineer in Materials Engineering</summary>
-            <ul>
-              <li>Structure of Materials</li>
-              <li>Physical &amp; Mechanical Testing</li>
-              <li>Corrosion &amp; Protection</li>
-              <li>Advanced Materials Lab</li>
-            </ul>
-          </details>
-          <details>
-            <summary>BSc in Applied Mathematics</summary>
-            <ul>
-              <li>Linear Algebra &amp; Calculus</li>
-              <li>Probability &amp; Statistics</li>
-              <li>Numerical Methods</li>
-              <li>Mathematical Modelling</li>
+              <li>Rozszerzona matematyka lub język</li>
+              <li>Przygotowanie do egzaminów</li>
+              <li>Godziny z wychowawcą i doradztwo zawodowe</li>
             </ul>
           </details>
         </div>
 
-        <!-- Health & Sport -->
+        <!-- IT -->
         <div class="card">
-          <h3>Health &amp; Sport</h3>
+          <h3>Informatyka i nowe technologie</h3>
           <details open>
-            <summary>BSc in Nursing</summary>
+            <summary>Profil informatyczny</summary>
             <ul>
-              <li>Anatomy &amp; Physiology</li>
-              <li>Fundamentals of Nursing</li>
-              <li>Clinical Practice in Hospitals</li>
-              <li>Emergency &amp; Intensive Care</li>
+              <li>Podstawy programowania (Scratch, Python, C++)</li>
+              <li>Tworzenie stron WWW i grafika komputerowa</li>
+              <li>Bazy danych i pakiet biurowy</li>
+              <li>Projekty zespołowe z wykorzystaniem IT</li>
             </ul>
           </details>
           <details>
-            <summary>BSc in Physiotherapy</summary>
+            <summary>Zajęcia dodatkowe</summary>
             <ul>
-              <li>Biomechanics &amp; Kinesiology</li>
-              <li>Physiotherapy in Orthopaedics</li>
-              <li>Neurological Physiotherapy</li>
-              <li>Rehabilitation Practice</li>
-            </ul>
-          </details>
-          <details>
-            <summary>BSc in Emergency Medical Services</summary>
-            <ul>
-              <li>Emergency Medicine</li>
-              <li>Trauma &amp; Rescue Operations</li>
-              <li>Pre-hospital Care</li>
-              <li>Disaster Management</li>
-            </ul>
-          </details>
-          <details>
-            <summary>Bachelor in Physical Education</summary>
-            <ul>
-              <li>Sports Training Theory</li>
-              <li>Fitness &amp; Wellness</li>
-              <li>Team Sports Methodology</li>
-              <li>Organization of Sport Events</li>
+              <li>Koło informatyczne i robotyczne</li>
+              <li>3D print, elektronika w praktyce</li>
+              <li>Wsparcie techniczne dla szkolnych projektów</li>
             </ul>
           </details>
         </div>
 
-        <!-- Humanities & Languages -->
+        <!-- Languages -->
         <div class="card">
-          <h3>Humanities &amp; Languages</h3>
+          <h3>Języki i humanistyka</h3>
           <details open>
-            <summary>BA in English Philology</summary>
+            <summary>Rozszerzony język angielski i niemiecki</summary>
             <ul>
-              <li>Practical English (C1)</li>
-              <li>British &amp; American Culture</li>
-              <li>Translation &amp; Interpreting</li>
-              <li>English for Business &amp; Law</li>
+              <li>Konwersacje w małych grupach</li>
+              <li>Przygotowanie do egzaminów językowych</li>
+              <li>Projekty kulturowe, teatr szkolny</li>
             </ul>
           </details>
           <details>
-            <summary>BA in German Philology</summary>
+            <summary>Media i komunikacja</summary>
             <ul>
-              <li>Practical German (B2–C1)</li>
-              <li>German Literature &amp; Culture</li>
-              <li>Business German</li>
-              <li>Translation Workshops</li>
-            </ul>
-          </details>
-          <details>
-            <summary>BA in Polish Philology</summary>
-            <ul>
-              <li>History of Polish Literature</li>
-              <li>Language Culture &amp; Editing</li>
-              <li>Contemporary Polish Language</li>
-              <li>Didactics of Polish</li>
-            </ul>
-          </details>
-          <details>
-            <summary>BA in Pedagogy</summary>
-            <ul>
-              <li>Developmental Psychology</li>
-              <li>Educational Diagnostics</li>
-              <li>Methods of Teaching</li>
-              <li>Inclusive Education</li>
+              <li>Gazetka i blog szkolny</li>
+              <li>Podstawy dziennikarstwa i fotografii</li>
+              <li>Wystąpienia publiczne, debaty</li>
             </ul>
           </details>
         </div>
 
-        <!-- Business & Administration -->
+        <!-- Health & Business -->
         <div class="card">
-          <h3>Business &amp; Administration</h3>
+          <h3>Zdrowie, sport i biznes</h3>
           <details open>
-            <summary>BA in Administration</summary>
+            <summary>Edukacja zdrowotna i sport</summary>
             <ul>
-              <li>Public Administration Law</li>
-              <li>EU Institutions &amp; Policies</li>
-              <li>Public Procurement</li>
-              <li>Office &amp; Document Management</li>
+              <li>WF, szkolne drużyny sportowe</li>
+              <li>Warsztaty o zdrowym stylu życia</li>
+              <li>Podstawy pierwszej pomocy</li>
             </ul>
           </details>
           <details>
-            <summary>BA in Economics</summary>
+            <summary>Biznes i umiejętności życiowe</summary>
             <ul>
-              <li>Micro- &amp; Macroeconomics</li>
-              <li>Econometrics</li>
-              <li>International Economics</li>
-              <li>Banking &amp; Finance</li>
-            </ul>
-          </details>
-          <details>
-            <summary>BA in Management</summary>
-            <ul>
-              <li>Organization &amp; Management</li>
-              <li>Project Management</li>
-              <li>Human Resources</li>
-              <li>Marketing Strategies</li>
-            </ul>
-          </details>
-          <details>
-            <summary>BA in Public Finance</summary>
-            <ul>
-              <li>Public Sector Accounting</li>
-              <li>Budget Planning</li>
-              <li>Tax Systems</li>
-              <li>Financial Control &amp; Audit</li>
+              <li>Podstawy przedsiębiorczości</li>
+              <li>Finanse osobiste dla młodzieży</li>
+              <li>Projekty z lokalnymi partnerami</li>
             </ul>
           </details>
         </div>
@@ -677,183 +626,149 @@
     </div>
   </section>
 
-  <!-- STUDENT LIFE / CO-CURRICULAR + GALLERY -->
+  <!-- STUDENT LIFE -->
   <section id="life" class="section section-alt">
     <div class="container">
-      <h2>Student Life &amp; Co-curricular Activities</h2>
+      <h2>Życie szkolne i zajęcia dodatkowe</h2>
       <p class="lead">
-        Beyond classes, SHVS students join clubs, sports teams, volunteering projects
-        and international events that make campus life active and friendly.
+        Nauka w SHVS nie kończy się na dzwonku. Uczniowie mogą brać udział
+        w kołach zainteresowań, sekcjach sportowych, projektach artystycznych
+        oraz wolontariacie.
       </p>
 
       <div class="grid-2" style="margin-bottom:1.7rem;">
         <div class="card">
-          <h3>Clubs &amp; Activities</h3>
+          <h3>Koła zainteresowań</h3>
           <ul>
-            <li>IT &amp; Robotics Club</li>
-            <li>Debate &amp; Language Society</li>
-            <li>Student Nursing Association</li>
-            <li>Business &amp; Entrepreneurship Club</li>
-            <li>Photography &amp; Media Circle</li>
-            <li>Volunteer &amp; Charity Group</li>
+            <li>Koło informatyczne i robotyki</li>
+            <li>Koło językowe i dyskusyjne</li>
+            <li>Szkolne koło naukowe</li>
+            <li>Chór i zajęcia plastyczne</li>
+            <li>Koło fotograficzne i medialne</li>
+            <li>Szkolne koło wolontariatu</li>
           </ul>
         </div>
         <div class="card">
-          <h3>Sports &amp; Events</h3>
+          <h3>Sport i wydarzenia</h3>
           <ul>
-            <li>Football, volleyball &amp; basketball leagues</li>
-            <li>Annual SHVS Sports Day</li>
-            <li>International Culture Week</li>
-            <li>Programming marathons &amp; hackathons</li>
-            <li>Academic conferences &amp; guest lectures</li>
+            <li>Drużyny piłki nożnej, siatkówki, koszykówki</li>
+            <li>Dzień sportu i imprezy szkolne</li>
+            <li>Pikniki rodzinne i festyny</li>
+            <li>Konkursy międzyszkolne i olimpiady</li>
+            <li>Dni otwarte dla uczniów i rodziców</li>
           </ul>
         </div>
       </div>
 
       <div class="gallery-grid">
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/1181567/pexels-photo-1181567.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Students in a modern classroom" />
-          <div class="gallery-label">Computer lab</div>
+          <img src="https://images.pexels.com/photos/1181567/pexels-photo-1181567.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Uczniowie w pracowni komputerowej" />
+          <div class="gallery-label">Pracownia komputerowa</div>
         </div>
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/2706379/pexels-photo-2706379.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Team of students working together" />
-          <div class="gallery-label">Group project</div>
+          <img src="https://images.pexels.com/photos/2706379/pexels-photo-2706379.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Praca w grupie" />
+          <div class="gallery-label">Projekt grupowy</div>
         </div>
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/3755440/pexels-photo-3755440.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Nursing students in practice" />
-          <div class="gallery-label">Nursing lab</div>
+          <img src="https://images.pexels.com/photos/3755440/pexels-photo-3755440.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Zajęcia zdrowotne" />
+          <div class="gallery-label">Edukacja zdrowotna</div>
         </div>
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/1438072/pexels-photo-1438072.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Students playing basketball" />
-          <div class="gallery-label">Sports centre</div>
+          <img src="https://images.pexels.com/photos/1438072/pexels-photo-1438072.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Hala sportowa" />
+          <div class="gallery-label">Hala sportowa</div>
         </div>
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/819916/pexels-photo-819916.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Students in library" />
-          <div class="gallery-label">Library</div>
+          <img src="https://images.pexels.com/photos/819916/pexels-photo-819916.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Biblioteka szkolna" />
+          <div class="gallery-label">Biblioteka</div>
         </div>
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/1595391/pexels-photo-1595391.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Students at graduation" />
-          <div class="gallery-label">Graduation</div>
+          <img src="https://images.pexels.com/photos/1595391/pexels-photo-1595391.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Uroczystość szkolna" />
+          <div class="gallery-label">Uroczystości</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TEACHERS / STAFF -->
+  <!-- TEACHERS -->
   <section id="teachers" class="section">
     <div class="container">
-      <h2>Academic Staff</h2>
+      <h2>Kadra pedagogiczna</h2>
       <p class="lead">
-        SHVS brings together experienced lecturers and practitioners. Below is a sample of our academic staff.
-        Names and emails are realistic examples for this demo website.
+        W State Higher Vocational School in Tarnów pracuje zespół doświadczonych
+        nauczycieli i wychowawców. Poniżej przykładowe profile kadry (adresy
+        e-mail w wersji demonstracyjnej na Gmail).
       </p>
 
       <div class="grid-3">
         <div class="teacher-card">
           <div class="teacher-photo">
-            <img src="https://images.pexels.com/photos/3777949/pexels-photo-3777949.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Portrait of lecturer" />
+            <img src="https://images.pexels.com/photos/3777949/pexels-photo-3777949.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Nauczycielka informatyki" />
           </div>
           <div>
-            <div class="teacher-name">Dr. Anna Kowalska</div>
-            <div class="teacher-role">Head of Computer Science</div>
-            <div>Specialisation: Software engineering, web technologies.</div>
-            <div class="teacher-mail">anna.kowalska@shvs.edu.pl</div>
+            <div class="teacher-name">dr Anna Kowalska</div>
+            <div class="teacher-role">nauczycielka informatyki</div>
+            <div>Specjalizacja: programowanie, technologie webowe, bezpieczeństwo w sieci.</div>
+            <div class="teacher-mail">anna.kowalska.shvs@gmail.com</div>
           </div>
         </div>
 
         <div class="teacher-card">
           <div class="teacher-photo">
-            <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Portrait of lecturer" />
+            <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Nauczyciel matematyki" />
           </div>
           <div>
-            <div class="teacher-name">Prof. Marek Nowak</div>
-            <div class="teacher-role">Professor of Electrical Engineering</div>
-            <div>Specialisation: Power systems, renewable energy.</div>
-            <div class="teacher-mail">marek.nowak@shvs.edu.pl</div>
+            <div class="teacher-name">prof. Marek Nowak</div>
+            <div class="teacher-role">nauczyciel matematyki i fizyki</div>
+            <div>Specjalizacja: przygotowanie do egzaminów, projekty STEM.</div>
+            <div class="teacher-mail">marek.nowak.shvs@gmail.com</div>
           </div>
         </div>
 
         <div class="teacher-card">
           <div class="teacher-photo">
-            <img src="https://images.pexels.com/photos/733500/pexels-photo-733500.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Portrait of lecturer" />
+            <img src="https://images.pexels.com/photos/733500/pexels-photo-733500.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Nauczycielka języka angielskiego" />
           </div>
           <div>
-            <div class="teacher-name">Mgr. Katarzyna Zielińska</div>
-            <div class="teacher-role">Lecturer in English Philology</div>
-            <div>Specialisation: Academic writing, translation.</div>
-            <div class="teacher-mail">katarzyna.zielinska@shvs.edu.pl</div>
+            <div class="teacher-name">mgr Katarzyna Zielińska</div>
+            <div class="teacher-role">nauczycielka języka angielskiego</div>
+            <div>Specjalizacja: komunikacja, teatr szkolny, projekty językowe.</div>
+            <div class="teacher-mail">katarzyna.zielinska.shvs@gmail.com</div>
           </div>
         </div>
 
         <div class="teacher-card">
           <div class="teacher-photo">
-            <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Portrait of lecturer" />
+            <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Nauczyciel WOS" />
           </div>
           <div>
-            <div class="teacher-name">Dr. Piotr Lewandowski</div>
-            <div class="teacher-role">Assistant Professor of Economics</div>
-            <div>Specialisation: Public finance, macroeconomics.</div>
-            <div class="teacher-mail">piotr.lewandowski@shvs.edu.pl</div>
+            <div class="teacher-name">dr Piotr Lewandowski</div>
+            <div class="teacher-role">nauczyciel WOS i ekonomii</div>
+            <div>Specjalizacja: edukacja obywatelska, przedsiębiorczość.</div>
+            <div class="teacher-mail">piotr.lewandowski.shvs@gmail.com</div>
           </div>
         </div>
 
         <div class="teacher-card">
           <div class="teacher-photo">
-            <img src="https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Portrait of lecturer" />
+            <img src="https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Nauczycielka biologii" />
           </div>
           <div>
-            <div class="teacher-name">Dr. Joanna Maj</div>
-            <div class="teacher-role">Senior Lecturer in Nursing</div>
-            <div>Specialisation: Internal medicine nursing, clinical practice.</div>
-            <div class="teacher-mail">joanna.maj@shvs.edu.pl</div>
+            <div class="teacher-name">dr Joanna Maj</div>
+            <div class="teacher-role">nauczycielka biologii i edukacji zdrowotnej</div>
+            <div>Specjalizacja: promocja zdrowia, zajęcia laboratoryjne.</div>
+            <div class="teacher-mail">joanna.maj.shvs@gmail.com</div>
           </div>
         </div>
 
         <div class="teacher-card">
           <div class="teacher-photo">
-            <img src="https://images.pexels.com/photos/1181524/pexels-photo-1181524.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Portrait of lecturer" />
+            <img src="https://images.pexels.com/photos/1181524/pexels-photo-1181524.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Nauczyciel WF" />
           </div>
           <div>
-            <div class="teacher-name">Mgr. Tomasz Wójcik</div>
-            <div class="teacher-role">Lecturer in Physical Education</div>
-            <div>Specialisation: Team sports and fitness training.</div>
-            <div class="teacher-mail">tomasz.wojcik@shvs.edu.pl</div>
-          </div>
-        </div>
-
-        <div class="teacher-card">
-          <div class="teacher-photo">
-            <img src="https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Portrait of lecturer" />
-          </div>
-          <div>
-            <div class="teacher-name">Dr. Magdalena Szymczak</div>
-            <div class="teacher-role">Lecturer in Pedagogy</div>
-            <div>Specialisation: Inclusive education &amp; didactics.</div>
-            <div class="teacher-mail">magdalena.szymczak@shvs.edu.pl</div>
-          </div>
-        </div>
-
-        <div class="teacher-card">
-          <div class="teacher-photo">
-            <img src="https://images.pexels.com/photos/3184611/pexels-photo-3184611.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Portrait of lecturer" />
-          </div>
-          <div>
-            <div class="teacher-name">Mgr. Jakub Lis</div>
-            <div class="teacher-role">Lecturer in Management</div>
-            <div>Specialisation: Project management &amp; marketing.</div>
-            <div class="teacher-mail">jakub.lis@shvs.edu.pl</div>
-          </div>
-        </div>
-
-        <div class="teacher-card">
-          <div class="teacher-photo">
-            <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Portrait of lecturer" />
-          </div>
-          <div>
-            <div class="teacher-name">Dr. Ewa Baran</div>
-            <div class="teacher-role">Lecturer in German Philology</div>
-            <div>Specialisation: German for business and tourism.</div>
-            <div class="teacher-mail">ewa.baran@shvs.edu.pl</div>
+            <div class="teacher-name">mgr Tomasz Wójcik</div>
+            <div class="teacher-role">nauczyciel wychowania fizycznego</div>
+            <div>Specjalizacja: gry zespołowe, fitness, turnieje szkolne.</div>
+            <div class="teacher-mail">tomasz.wojcik.shvs@gmail.com</div>
           </div>
         </div>
       </div>
@@ -864,27 +779,32 @@
   <section id="admissions" class="section section-alt">
     <div class="container two-col">
       <div>
-        <h2>Admissions</h2>
+        <h2>Rekrutacja</h2>
         <p class="lead">
-          Admission is organised online. International candidates are welcome.
+          Rekrutacja do State Higher Vocational School in Tarnów odbywa się
+          zgodnie z obowiązującymi przepisami. Zapraszamy uczniów z Tarnowa
+          i okolicznych miejscowości.
         </p>
-        <p>Basic documents:</p>
+        <p>Przykładowe dokumenty wymagane przy zapisie:</p>
         <ul>
-          <li>High school / secondary school certificate</li>
-          <li>Valid ID or passport</li>
-          <li>Language certificate (for English-taught programmes)</li>
-          <li>Any extra documents required for your chosen field</li>
+          <li>Wniosek o przyjęcie do szkoły (formularz)</li>
+          <li>Świadectwo ukończenia poprzedniego etapu edukacyjnego</li>
+          <li>Karta zdrowia ucznia (jeśli jest wymagana)</li>
+          <li>Zdjęcia do legitymacji szkolnej</li>
         </ul>
+        <p class="small-muted">
+          Aktualne zasady i terminy rekrutacji można uzyskać w sekretariacie szkoły.
+        </p>
       </div>
       <div class="card">
-        <h3>Example Timeline</h3>
+        <h3>Przykładowy harmonogram</h3>
         <ul>
-          <li><strong>Registration:</strong> 1 May – 15 July</li>
-          <li><strong>Documents:</strong> 1 June – 20 July</li>
-          <li><strong>Results:</strong> end of July</li>
-          <li><strong>Start of semester:</strong> 1 October</li>
+          <li><strong>Spotkania informacyjne:</strong> marzec – kwiecień</li>
+          <li><strong>Składanie wniosków:</strong> maj – czerwiec</li>
+          <li><strong>Listy przyjętych:</strong> koniec czerwca</li>
+          <li><strong>Rozpoczęcie roku szkolnego:</strong> 1 września</li>
         </ul>
-        <p class="small-muted">*Dates are examples. Update them with real deadlines if needed.</p>
+        <p class="small-muted">*Terminy przykładowe – należy dostosować do bieżącego kalendarza.</p>
       </div>
     </div>
   </section>
@@ -893,29 +813,30 @@
   <section id="contact" class="section">
     <div class="container two-col">
       <div>
-        <h2>Contact</h2>
-        <p class="lead">
-          Have questions about programmes, admissions, or cooperation?
-          Get in touch with us.
+        <h2>Kontakt</h2>
+      <p class="lead">
+          Masz pytania dotyczące zajęć, rekrutacji lub współpracy?
+          Skontaktuj się z sekretariatem szkoły.
         </p>
         <div class="contact-list">
-          <p><span class="badge-mail">General</span>
+          <p><span class="badge-mail">Ogólny</span>
             <a href="mailto:middleway1122@gmail.com">middleway1122@gmail.com</a></p>
-          <p><span class="badge-mail">Official</span>
+          <p><span class="badge-mail">Sekretariat</span>
             <a href="mailto:admin@shvs.edu.pl">admin@shvs.edu.pl</a></p>
-          <p><strong>Address:</strong> [Street Name] [Building], [Postal Code] [City], Poland</p>
+          <p><strong>Adres:</strong> ul. Adama Mickiewicza 8, 33-100 Tarnów, Polska</p>
         </div>
       </div>
 
       <div class="contact-card">
-        <h3>Quick Info</h3>
+        <h3>Sekretariat szkoły</h3>
         <ul>
-          <li>Email replies usually within 1–2 working days.</li>
-          <li>Please write in English or Polish for faster processing.</li>
-          <li>For document scans and attachments, use the official email: <strong>admin@shvs.edu.pl</strong>.</li>
+          <li><strong>Pokój:</strong> parter, główny budynek</li>
+          <li><strong>Telefon (przykładowy):</strong> +48 000 000 000</li>
+          <li><strong>Godziny pracy:</strong> pon.–pt. 8:00–15:00</li>
         </ul>
         <p class="small-muted">
-          This is a demo static website created for presentation purposes. Replace details with official information when available.
+          Strona demonstracyjna. Po uruchomieniu jako oficjalna strona szkoły
+          należy uzupełnić prawdziwe dane kontaktowe.
         </p>
       </div>
     </div>
@@ -924,7 +845,8 @@
   <!-- FOOTER -->
   <footer>
     <div class="container">
-      &copy; <span id="year"></span> SHVS – State Higher Vocational School. All rights reserved.
+      <div>&copy; <span id="year"></span> State Higher Vocational School in Tarnów (SHVS). Wszelkie prawa zastrzeżone.</div>
+      <div class="small-muted">ul. Adama Mickiewicza 8, 33-100 Tarnów, Polska</div>
     </div>
   </footer>
 
