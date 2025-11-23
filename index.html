@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SHVS – State Higher Vocational School</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="SHVS – State Higher Vocational School. Practical, career-focused higher education with international cooperation." />
+  <style>
+    /* ==== SIMPLE ONE-FILE DESIGN WITH PROGRAMMES + GALLERY + TEACHERS ==== */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #020617;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* Navbar */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(15,23,42,0.96);
+      border-bottom: 1px solid rgba(148,163,184,0.3);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.7rem 0;
+    }
+
+    .logo-text {
+      font-size: 0.9rem;
+      color: #9ca3af;
+    }
+
+    .logo-badge {
+      display: inline-block;
+      padding: 0.2rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      background: linear-gradient(135deg,#38bdf8,#22c55e);
+      color: #0b1120;
+      text-transform: uppercase;
+    }
+
+    nav a {
+      font-size: 0.9rem;
+      margin-left: 0.9rem;
+      padding: 0.25rem 0.55rem;
+      border-radius: 999px;
+      color: #9ca3af;
+      transition: background .15s, color .15s;
+    }
+
+    nav a:hover {
+      background: rgba(15,23,42,0.8);
+      color: #e5e7eb;
+    }
+
+    .btn-nav {
+      border: 1px solid rgba(148,163,184,0.6);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 3rem 0 2.5rem;
+      background: radial-gradient(circle at top, #0f172a 0, #020617 45%, #000 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 3vw + 1.2rem, 3.1rem);
+      line-height: 1.1;
+      margin-bottom: 0.6rem;
+    }
+
+    .accent {
+      background: linear-gradient(135deg,#38bdf8,#22c55e);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      color: #9ca3af;
+      max-width: 32rem;
+      font-size: 0.97rem;
+    }
+
+    .hero-buttons {
+      margin-top: 1.4rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.7rem 1.35rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg,#38bdf8,#0ea5e9);
+      color: #0b1120;
+      box-shadow: 0 14px 40px rgba(56,189,248,0.4);
+    }
+
+    .btn-ghost {
+      border: 1px solid rgba(148,163,184,0.6);
+      background: rgba(15,23,42,0.85);
+      color: #e5e7eb;
+    }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 1.7rem;
+      font-size: 0.85rem;
+    }
+
+    .stat span:first-child {
+      display: block;
+      font-weight: 600;
+      font-size: 1.3rem;
+    }
+
+    .hero-card {
+      background: #020617;
+      border-radius: 20px;
+      padding: 1.5rem;
+      border: 1px solid rgba(148,163,184,0.4);
+      box-shadow: 0 18px 45px rgba(15,23,42,0.7);
+      font-size: 0.9rem;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      padding: 0.2rem .6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.6);
+      color: #9ca3af;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero-photo {
+      margin-top: 0.9rem;
+      border-radius: 16px;
+      height: 180px;
+      background-image: url("https://images.pexels.com/photos/207691/pexels-photo-207691.jpeg?auto=compress&cs=tinysrgb&w=1200");
+      background-size: cover;
+      background-position: center;
+      border: 1px solid rgba(148,163,184,0.5);
+    }
+
+    /* Sections */
+    .section {
+      padding: 2.7rem 0;
+    }
+
+    .section-alt {
+      background: #020617;
+    }
+
+    .section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .section p.lead {
+      color: #9ca3af;
+      max-width: 34rem;
+      font-size: 0.95rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 1.8rem;
+      align-items: flex-start;
+    }
+
+    .card {
+      background: #020617;
+      border-radius: 16px;
+      padding: 1.1rem 1.2rem;
+      border: 1px solid rgba(148,163,184,0.4);
+      font-size: 0.9rem;
+    }
+
+    ul {
+      padding-left: 1rem;
+    }
+
+    ul li {
+      margin-bottom: 0.25rem;
+    }
+
+    .grid-2, .grid-3, .grid-4 {
+      display: grid;
+      gap: 1.2rem;
+    }
+
+    .grid-4 { grid-template-columns: repeat(4, minmax(0,1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+
+    .small-muted {
+      font-size: 0.8rem;
+      color: #9ca3af;
+      margin-top: 0.4rem;
+    }
+
+    /* Programme details */
+    details {
+      margin-top: 0.4rem;
+      border-radius: 10px;
+      background: #020617;
+      border: 1px solid rgba(148,163,184,0.3);
+      padding: 0.45rem 0.6rem;
+    }
+
+    summary {
+      list-style: none;
+      cursor: pointer;
+      font-size: 0.86rem;
+      font-weight: 500;
+    }
+
+    summary::marker,
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary:after {
+      content: "▾";
+      float: right;
+      font-size: 0.75rem;
+      opacity: 0.7;
+    }
+
+    details[open] summary:after {
+      content: "▴";
+    }
+
+    details ul {
+      margin-top: 0.35rem;
+      font-size: 0.82rem;
+      color: #9ca3af;
+    }
+
+    /* Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.9rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(148,163,184,0.4);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery-label {
+      position: absolute;
+      left: 0.65rem;
+      bottom: 0.55rem;
+      background: rgba(15,23,42,0.82);
+      padding: 0.16rem 0.5rem;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: #e5e7eb;
+    }
+
+    /* Teachers */
+    .teacher-card {
+      background: #020617;
+      border-radius: 16px;
+      padding: 1rem;
+      border: 1px solid rgba(148,163,184,0.4);
+      display: flex;
+      gap: 0.8rem;
+      font-size: 0.88rem;
+    }
+
+    .teacher-photo {
+      flex: 0 0 56px;
+      height: 56px;
+      border-radius: 999px;
+      overflow: hidden;
+      border: 1px solid rgba(148,163,184,0.5);
+    }
+
+    .teacher-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .teacher-name {
+      font-weight: 600;
+    }
+
+    .teacher-role {
+      font-size: 0.82rem;
+      color: #9ca3af;
+    }
+
+    .teacher-mail {
+      font-size: 0.8rem;
+      color: #93c5fd;
+      margin-top: 0.2rem;
+      word-break: break-all;
+    }
+
+    /* Contact */
+    .contact-list p {
+      margin-bottom: 0.25rem;
+      font-size: 0.92rem;
+    }
+
+    .badge-mail {
+      display: inline-block;
+      padding: 0.15rem 0.45rem;
+      font-size: 0.7rem;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(148,163,184,0.5);
+      margin-right: 0.3rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: #9ca3af;
+    }
+
+    .contact-card {
+      background: #020617;
+      border-radius: 16px;
+      padding: 1.2rem 1.2rem 1.3rem;
+      border: 1px solid rgba(148,163,184,0.4);
+      font-size: 0.9rem;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid rgba(30,64,175,0.7);
+      padding: 1.4rem 0 1.8rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #9ca3af;
+      background: #020617;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-grid, .two-col, .grid-4, .grid-3, .grid-2, .gallery-grid {
+        grid-template-columns: minmax(0,1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      nav { display: none; } /* mobile e just logo thakbe */
+      .hero { padding-top: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <div class="container nav">
+      <div>
+        <div class="logo-badge">SHVS</div>
+        <div class="logo-text">State Higher Vocational School</div>
+      </div>
+      <nav>
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#programmes">Programmes</a>
+        <a href="#life">Student Life</a>
+        <a href="#teachers">Teachers</a>
+        <a href="#admissions">Admissions</a>
+        <a href="#contact" class="btn-nav">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1>Practical Higher Education<br><span class="accent">for a Global Future</span></h1>
+        <p>
+          SHVS (State Higher Vocational School) offers modern, career-focused programmes
+          that combine academic knowledge with real-world skills, international projects,
+          and cooperation with industry partners.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#admissions" class="btn btn-primary">Apply Now</a>
+          <a href="#programmes" class="btn btn-ghost">View Programmes</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <span>20+</span><span>Study programmes</span>
+          </div>
+          <div class="stat">
+            <span>3,000+</span><span>Active students</span>
+          </div>
+          <div class="stat">
+            <span>40+</span><span>Partner institutions</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="hero-card">
+          <div class="hero-tag">International Friendly</div>
+          <h3>Study in a modern European campus</h3>
+          <p>
+            Join students from different countries, develop your skills,
+            and experience life in a safe and welcoming city.
+          </p>
+          <ul>
+            <li>Practice-based classes & labs</li>
+            <li>Small groups & individual support</li>
+            <li>Erasmus+ mobility opportunities</li>
+          </ul>
+          <div class="hero-photo"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section section-alt">
+    <div class="container two-col">
+      <div>
+        <h2>About SHVS</h2>
+        <p class="lead">
+          SHVS is a public state higher vocational school offering first-cycle
+          (bachelor and engineer) programmes with a strong practical profile.
+        </p>
+        <p>
+          Our classes are conducted by experienced academics and professionals.
+          Students benefit from modern laboratories, multimedia classrooms,
+          and close cooperation with local companies and institutions.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Key Facts</h3>
+        <ul>
+          <li>Public higher education institution</li>
+          <li>Modern campus & specialist laboratories</li>
+          <li>Strong focus on employability</li>
+          <li>International projects and partnerships</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMMES + COURSES -->
+  <section id="programmes" class="section">
+    <div class="container">
+      <h2>Study Programmes</h2>
+      <p class="lead">Full list of fields with example courses for each programme.</p>
+
+      <div class="grid-4">
+        <!-- Engineering & IT -->
+        <div class="card">
+          <h3>Engineering &amp; IT</h3>
+          <details open>
+            <summary>BSc in Computer Science</summary>
+            <ul>
+              <li>Programming in C++ &amp; Python</li>
+              <li>Web Development &amp; Databases</li>
+              <li>Algorithms &amp; Data Structures</li>
+              <li>Software Engineering Project</li>
+            </ul>
+          </details>
+          <details>
+            <summary>Engineer in Electrical Engineering</summary>
+            <ul>
+              <li>Circuit Theory &amp; Electronics</li>
+              <li>Power Systems &amp; Machines</li>
+              <li>Automation &amp; PLC</li>
+              <li>Energy Efficiency &amp; Renewables</li>
+            </ul>
+          </details>
+          <details>
+            <summary>Engineer in Materials Engineering</summary>
+            <ul>
+              <li>Structure of Materials</li>
+              <li>Physical &amp; Mechanical Testing</li>
+              <li>Corrosion &amp; Protection</li>
+              <li>Advanced Materials Lab</li>
+            </ul>
+          </details>
+          <details>
+            <summary>BSc in Applied Mathematics</summary>
+            <ul>
+              <li>Linear Algebra &amp; Calculus</li>
+              <li>Probability &amp; Statistics</li>
+              <li>Numerical Methods</li>
+              <li>Mathematical Modelling</li>
+            </ul>
+          </details>
+        </div>
+
+        <!-- Health & Sport -->
+        <div class="card">
+          <h3>Health &amp; Sport</h3>
+          <details open>
+            <summary>BSc in Nursing</summary>
+            <ul>
+              <li>Anatomy &amp; Physiology</li>
+              <li>Fundamentals of Nursing</li>
+              <li>Clinical Practice in Hospitals</li>
+              <li>Emergency &amp; Intensive Care</li>
+            </ul>
+          </details>
+          <details>
+            <summary>BSc in Physiotherapy</summary>
+            <ul>
+              <li>Biomechanics &amp; Kinesiology</li>
+              <li>Physiotherapy in Orthopaedics</li>
+              <li>Neurological Physiotherapy</li>
+              <li>Rehabilitation Practice</li>
+            </ul>
+          </details>
+          <details>
+            <summary>BSc in Emergency Medical Services</summary>
+            <ul>
+              <li>Emergency Medicine</li>
+              <li>Trauma &amp; Rescue Operations</li>
+              <li>Pre-hospital Care</li>
+              <li>Disaster Management</li>
+            </ul>
+          </details>
+          <details>
+            <summary>Bachelor in Physical Education</summary>
+            <ul>
+              <li>Sports Training Theory</li>
+              <li>Fitness &amp; Wellness</li>
+              <li>Team Sports Methodology</li>
+              <li>Organization of Sport Events</li>
+            </ul>
+          </details>
+        </div>
+
+        <!-- Humanities & Languages -->
+        <div class="card">
+          <h3>Humanities &amp; Languages</h3>
+          <details open>
+            <summary>BA in English Philology</summary>
+            <ul>
+              <li>Practical English (C1)</li>
+              <li>British &amp; American Culture</li>
+              <li>Translation &amp; Interpreting</li>
+              <li>English for Business &amp; Law</li>
+            </ul>
+          </details>
+          <details>
+            <summary>BA in German Philology</summary>
+            <ul>
+              <li>Practical German (B2–C1)</li>
+              <li>German Literature &amp; Culture</li>
+              <li>Business German</li>
+              <li>Translation Workshops</li>
+            </ul>
+          </details>
+          <details>
+            <summary>BA in Polish Philology</summary>
+            <ul>
+              <li>History of Polish Literature</li>
+              <li>Language Culture &amp; Editing</li>
+              <li>Contemporary Polish Language</li>
+              <li>Didactics of Polish</li>
+            </ul>
+          </details>
+          <details>
+            <summary>BA in Pedagogy</summary>
+            <ul>
+              <li>Developmental Psychology</li>
+              <li>Educational Diagnostics</li>
+              <li>Methods of Teaching</li>
+              <li>Inclusive Education</li>
+            </ul>
+          </details>
+        </div>
+
+        <!-- Business & Administration -->
+        <div class="card">
+          <h3>Business &amp; Administration</h3>
+          <details open>
+            <summary>BA in Administration</summary>
+            <ul>
+              <li>Public Administration Law</li>
+              <li>EU Institutions &amp; Policies</li>
+              <li>Public Procurement</li>
+              <li>Office &amp; Document Management</li>
+            </ul>
+          </details>
+          <details>
+            <summary>BA in Economics</summary>
+            <ul>
+              <li>Micro- &amp; Macroeconomics</li>
+              <li>Econometrics</li>
+              <li>International Economics</li>
+              <li>Banking &amp; Finance</li>
+            </ul>
+          </details>
+          <details>
+            <summary>BA in Management</summary>
+            <ul>
+              <li>Organization &amp; Management</li>
+              <li>Project Management</li>
+              <li>Human Resources</li>
+              <li>Marketing Strategies</li>
+            </ul>
+          </details>
+          <details>
+            <summary>BA in Public Finance</summary>
+            <ul>
+              <li>Public Sector Accounting</li>
+              <li>Budget Planning</li>
+              <li>Tax Systems</li>
+              <li>Financial Control &amp; Audit</li>
+            </ul>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STUDENT LIFE / CO-CURRICULAR + GALLERY -->
+  <section id="life" class="section section-alt">
+    <div class="container">
+      <h2>Student Life &amp; Co-curricular Activities</h2>
+      <p class="lead">
+        Beyond classes, SHVS students join clubs, sports teams, volunteering projects
+        and international events that make campus life active and friendly.
+      </p>
+
+      <div class="grid-2" style="margin-bottom:1.7rem;">
+        <div class="card">
+          <h3>Clubs &amp; Activities</h3>
+          <ul>
+            <li>IT &amp; Robotics Club</li>
+            <li>Debate &amp; Language Society</li>
+            <li>Student Nursing Association</li>
+            <li>Business &amp; Entrepreneurship Club</li>
+            <li>Photography &amp; Media Circle</li>
+            <li>Volunteer &amp; Charity Group</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Sports &amp; Events</h3>
+          <ul>
+            <li>Football, volleyball &amp; basketball leagues</li>
+            <li>Annual SHVS Sports Day</li>
+            <li>International Culture Week</li>
+            <li>Programming marathons &amp; hackathons</li>
+            <li>Academic conferences &amp; guest lectures</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://images.pexels.com/photos/1181567/pexels-photo-1181567.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Students in a modern classroom" />
+          <div class="gallery-label">Computer lab</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.pexels.com/photos/2706379/pexels-photo-2706379.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Team of students working together" />
+          <div class="gallery-label">Group project</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.pexels.com/photos/3755440/pexels-photo-3755440.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Nursing students in practice" />
+          <div class="gallery-label">Nursing lab</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.pexels.com/photos/1438072/pexels-photo-1438072.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Students playing basketball" />
+          <div class="gallery-label">Sports centre</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.pexels.com/photos/819916/pexels-photo-819916.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Students in library" />
+          <div class="gallery-label">Library</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.pexels.com/photos/1595391/pexels-photo-1595391.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Students at graduation" />
+          <div class="gallery-label">Graduation</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEACHERS / STAFF -->
+  <section id="teachers" class="section">
+    <div class="container">
+      <h2>Academic Staff</h2>
+      <p class="lead">
+        SHVS brings together experienced lecturers and practitioners. Below is a sample of our academic staff.
+        Names and emails are realistic examples for this demo website.
+      </p>
+
+      <div class="grid-3">
+        <div class="teacher-card">
+          <div class="teacher-photo">
+            <img src="https://images.pexels.com/photos/3777949/pexels-photo-3777949.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Portrait of lecturer" />
+          </div>
+          <div>
+            <div class="teacher-name">Dr. Anna Kowalska</div>
+            <div class="teacher-role">Head of Computer Science</div>
+            <div>Specialisation: Software engineering, web technologies.</div>
+            <div class="teacher-mail">anna.kowalska@shvs.edu.pl</div>
+          </div>
+        </div>
+
+        <div class="teacher-card">
+          <div class="teacher-photo">
+            <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Portrait of lecturer" />
+          </div>
+          <div>
+            <div class="teacher-name">Prof. Marek Nowak</div>
+            <div class="teacher-role">Professor of Electrical Engineering</div>
+            <div>Specialisation: Power systems, renewable energy.</div>
+            <div class="teacher-mail">marek.nowak@shvs.edu.pl</div>
+          </div>
+        </div>
+
+        <div class="teacher-card">
+          <div class="teacher-photo">
+            <img src="https://images.pexels.com/photos/733500/pexels-photo-733500.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Portrait of lecturer" />
+          </div>
+          <div>
+            <div class="teacher-name">Mgr. Katarzyna Zielińska</div>
+            <div class="teacher-role">Lecturer in English Philology</div>
+            <div>Specialisation: Academic writing, translation.</div>
+            <div class="teacher-mail">katarzyna.zielinska@shvs.edu.pl</div>
+          </div>
+        </div>
+
+        <div class="teacher-card">
+          <div class="teacher-photo">
+            <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Portrait of lecturer" />
+          </div>
+          <div>
+            <div class="teacher-name">Dr. Piotr Lewandowski</div>
+            <div class="teacher-role">Assistant Professor of Economics</div>
+            <div>Specialisation: Public finance, macroeconomics.</div>
+            <div class="teacher-mail">piotr.lewandowski@shvs.edu.pl</div>
+          </div>
+        </div>
+
+        <div class="teacher-card">
+          <div class="teacher-photo">
+            <img src="https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Portrait of lecturer" />
+          </div>
+          <div>
+            <div class="teacher-name">Dr. Joanna Maj</div>
+            <div class="teacher-role">Senior Lecturer in Nursing</div>
+            <div>Specialisation: Internal medicine nursing, clinical practice.</div>
+            <div class="teacher-mail">joanna.maj@shvs.edu.pl</div>
+          </div>
+        </div>
+
+        <div class="teacher-card">
+          <div class="teacher-photo">
+            <img src="https://images.pexels.com/photos/1181524/pexels-photo-1181524.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Portrait of lecturer" />
+          </div>
+          <div>
+            <div class="teacher-name">Mgr. Tomasz Wójcik</div>
+            <div class="teacher-role">Lecturer in Physical Education</div>
+            <div>Specialisation: Team sports and fitness training.</div>
+            <div class="teacher-mail">tomasz.wojcik@shvs.edu.pl</div>
+          </div>
+        </div>
+
+        <div class="teacher-card">
+          <div class="teacher-photo">
+            <img src="https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Portrait of lecturer" />
+          </div>
+          <div>
+            <div class="teacher-name">Dr. Magdalena Szymczak</div>
+            <div class="teacher-role">Lecturer in Pedagogy</div>
+            <div>Specialisation: Inclusive education &amp; didactics.</div>
+            <div class="teacher-mail">magdalena.szymczak@shvs.edu.pl</div>
+          </div>
+        </div>
+
+        <div class="teacher-card">
+          <div class="teacher-photo">
+            <img src="https://images.pexels.com/photos/3184611/pexels-photo-3184611.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Portrait of lecturer" />
+          </div>
+          <div>
+            <div class="teacher-name">Mgr. Jakub Lis</div>
+            <div class="teacher-role">Lecturer in Management</div>
+            <div>Specialisation: Project management &amp; marketing.</div>
+            <div class="teacher-mail">jakub.lis@shvs.edu.pl</div>
+          </div>
+        </div>
+
+        <div class="teacher-card">
+          <div class="teacher-photo">
+            <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Portrait of lecturer" />
+          </div>
+          <div>
+            <div class="teacher-name">Dr. Ewa Baran</div>
+            <div class="teacher-role">Lecturer in German Philology</div>
+            <div>Specialisation: German for business and tourism.</div>
+            <div class="teacher-mail">ewa.baran@shvs.edu.pl</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADMISSIONS -->
+  <section id="admissions" class="section section-alt">
+    <div class="container two-col">
+      <div>
+        <h2>Admissions</h2>
+        <p class="lead">
+          Admission is organised online. International candidates are welcome.
+        </p>
+        <p>Basic documents:</p>
+        <ul>
+          <li>High school / secondary school certificate</li>
+          <li>Valid ID or passport</li>
+          <li>Language certificate (for English-taught programmes)</li>
+          <li>Any extra documents required for your chosen field</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Example Timeline</h3>
+        <ul>
+          <li><strong>Registration:</strong> 1 May – 15 July</li>
+          <li><strong>Documents:</strong> 1 June – 20 July</li>
+          <li><strong>Results:</strong> end of July</li>
+          <li><strong>Start of semester:</strong> 1 October</li>
+        </ul>
+        <p class="small-muted">*Dates are examples. Update them with real deadlines if needed.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container two-col">
+      <div>
+        <h2>Contact</h2>
+        <p class="lead">
+          Have questions about programmes, admissions, or cooperation?
+          Get in touch with us.
+        </p>
+        <div class="contact-list">
+          <p><span class="badge-mail">General</span>
+            <a href="mailto:middleway1122@gmail.com">middleway1122@gmail.com</a></p>
+          <p><span class="badge-mail">Official</span>
+            <a href="mailto:admin@shvs.edu.pl">admin@shvs.edu.pl</a></p>
+          <p><strong>Address:</strong> [Street Name] [Building], [Postal Code] [City], Poland</p>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <h3>Quick Info</h3>
+        <ul>
+          <li>Email replies usually within 1–2 working days.</li>
+          <li>Please write in English or Polish for faster processing.</li>
+          <li>For document scans and attachments, use the official email: <strong>admin@shvs.edu.pl</strong>.</li>
+        </ul>
+        <p class="small-muted">
+          This is a demo static website created for presentation purposes. Replace details with official information when available.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      &copy; <span id="year"></span> SHVS – State Higher Vocational School. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
